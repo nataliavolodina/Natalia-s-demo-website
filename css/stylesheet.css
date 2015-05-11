@@ -1,0 +1,96 @@
+body {
+    font-family: "Arial", "Verdana", monospace;
+    background-color: #CCFFFF;
+    border: 10px solid #000000;
+}
+.header {
+    background-image: url("../images/abstract.jpg");
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 2em;
+    padding: 5% 15% 15% 15%;
+    border: 15px double #BC8F8F; 
+}
+nav {
+    border-top: 8px solid #FFFFFF;
+    border-bottom: 5px solid #FFFFFF;
+    padding: 1em;
+}
+
+nav a {
+    
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 2em;
+    padding .5em;
+    letter-spacing: .2em;
+    display: block;
+}
+#portfolio {
+    background-image: url("../images/Fareoh.jpg");
+    margin: 0;
+    padding: 30%;
+    border: 10px double #FFFFFF; 
+}
+
+#portfolio a {
+    font-size: 5em;
+    color: #000066;
+    text-decoration: none;
+    text-align: justify;
+
+}
+#photography {
+    background-image: url("../images/escapade.jpg");
+    padding: 30%; 
+    text-decoration: none;
+    border: 10px double #FFFFFF; 
+}
+#photography a {
+    font-size: 5em;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: justify;
+
+}
+
+#bio {
+    background-image: url("../images/woofer.jpg");
+    background-color: #FF4500;
+    padding: 30%;
+    text-align: center;
+    border: 10px double #FFFFFF; 
+}
+
+#bio a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 5em;
+}
+
+#follow {
+    background-image: url("../images/koansound.jpg"); 
+    border: 10px solid #FFFFFF;
+    background-color: #000000;
+    padding: 3em; 
+    text-align: left;
+    font-size: 2em;
+}
+
+#follow a {
+    color: white;
+}
+.rrssb-email {
+    align-content: center;
+}
+h3 {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 60px;
+}
+
+a:hover { 
+    background-color: #66CDAA;
+}
+    
