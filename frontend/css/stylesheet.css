@@ -1,0 +1,485 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+  font-family: 'codropsicons';
+  src:url('../fonts/codropsicons/codropsicons.eot');
+  src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+    url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+    url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  color: #6b7381;
+  background: #f2f2f2;
+  margin: 0;
+}
+
+a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #333;
+}
+
+/* Header Style */
+.container > .header {
+  width: 99%;
+  height: 200px;
+  margin: 0;
+  padding: 20px;
+  position: fixed;
+  z-index: 10000;
+  background: rgba(0,0,0,0.8);
+  top: 0;
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.container > .header h1 {
+  font-size: 2.625em;
+  line-height: 1.3;
+  margin: 0;
+  font-weight: 300;
+	text-align: center;
+}
+
+.container > .closedHeader{
+	height: 80px;
+	overflow: auto;
+}
+.codrops-demos {
+  padding-top: 20px;
+  font-size: 30px;
+	padding-left: 230px;
+	padding-right: 120px;
+}
+
+.codrops-demos a {
+  display: inline-table;
+  margin: 0.5em;
+  padding: 0.4em 1.1em;
+  color: red;
+  font-weight: 700;
+	text-align: center;
+	align-content: center;
+}
+
+.codrops-demos a:hover,
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover {
+  opacity: 0.6;
+}
+
+#up {
+	color: white;
+  float: right;
+  font-size: 37px;
+  position: absolute;
+  right: 50px;
+  top: 130px;
+}
+
+#down {
+	display: none;
+	font-size: 37px;
+  float: right;
+  margin-top: -45px;
+  margin-right: -10px;
+	color: red;
+	position: fixed;
+	right: 50px;
+}
+
+.activeDown {
+	display: inline !important;
+}
+
+/* Main Page */
+.banner {
+  width: 99%;
+  height: 900px;
+  padding-top: 167px;
+  position: relative;
+  top: 200px;
+  margin: 0;
+}
+
+.about {
+  background: rgba(0,0,0,0.8);
+  width: 99%;
+  height: 640px;
+  margin: 0;
+  position: relative;
+  top: 210px;
+  overflow: auto;
+}
+
+.box1 img {
+  display: block;
+  max-width: 100%;
+}
+
+.pboxes {
+  text-align: center;
+  margin-left: 7%;
+
+}
+
+.circles {
+  width: 25%;
+  display: inline;
+
+}
+.box1, .box2, .box3, .box4 {
+    border: 12px solid #F5FFFA; 
+    border-radius: 50%;
+    width: 17em;
+    height: 17em;
+    float: left;
+    margin: 1%;
+}
+
+.commentArea {
+  width: 99%;
+  height: 780px;
+  position: relative;
+  top: 220px;
+}
+
+.input {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	margin: 1em;
+	max-width: 350px;
+	width: calc(100% - 2em);
+	vertical-align: top;
+}
+
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #aaa;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: #6a7989;
+	font-weight: bold;
+	font-size: 70.25%;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.input__label-content {
+	position: relative;
+	display: block;
+	padding: 1.6em 0;
+	width: 100%;
+}
+
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.icon {
+	color: #ddd;
+	font-size: 250%;
+}
+
+.input__field--yoko {
+	z-index: 10;
+	width: 100%;
+	background: transparent;
+	color: #f5f5f5;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.input__label--yoko {
+	position: relative;
+	width: 100%;
+	color: #b04b40;
+	text-align: left;
+}
+
+.input__label--yoko::before {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	width: 100%;
+	height: 4em;
+	background: #c5564a;
+	-webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+	transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.input__label--yoko::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0.25em;
+	background: #ad473c;
+	-webkit-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.input__label-content--yoko {
+	padding: 0.65em 0;
+}
+
+.input__field--yoko:focus,
+.input--filled .input__field--yoko {
+	opacity: 1;
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+
+.input__field--yoko:focus + .input__label--yoko::before,
+.input--filled .input__label--yoko::before {
+	-webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+	transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+}
+
+.input__field--yoko:focus + .input__label--yoko,
+.input--filled .input__label--yoko {
+	pointer-events: none;
+}
+
+.input__field--yoko:focus + .input__label--yoko::after,
+.input--filled .input__label--yoko::after {
+	-webkit-transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+	transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+}
+
+
+.messages {
+  padding-top: 14%;
+	align-content: center;
+}
+
+form {
+  background: rgba(0,0,0,0.5);
+  width: 35%;
+  height: 555px;
+  text-align: center;
+	align-content: center;
+  padding: 2%;
+  font-size: 1.5em;
+  color: #FFFFF0;
+  box-shadow: 15px 12px 33px #708090;
+}
+
+.button {
+  width: 190px;
+  height: 35px;
+  font-size: .7em;
+	border-radius: 15%; 
+	font-weight: bolder;
+	letter-spacing: 2px;
+  background-color: #ADFF2F;
+  border-radius: 5%;
+  color: red;
+}
+
+#name, #email {
+  opacity: .5;
+  background-color: #D8BFD8;
+  color: black;
+  width: 200px;
+  height: 30px;
+  font-size: .5em;
+}
+
+.headName{
+  margin-top: 1px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Lato';
+  display: none;
+}
+
+/* Hover Effects */
+.codrops-demos > a:hover .headName{
+  display: inline-block;
+  margin: 4%;
+}
+
+.box1:hover img {
+  display: block;
+  border-radius: 50%;
+}
+
+.box1:hover h4{
+  display: none;
+}
+
+.box1 img {
+  display: none;
+}
+
+.box2:hover img {
+  display: block;
+  border-radius: 50%;
+}
+
+.box2:hover h4{
+  display: none;
+}
+.box2 img {
+  display: none;
+}
+
+.box3:hover img {
+  display: block;
+  border-radius: 50%;
+}
+
+.box3:hover h4{
+  display: none;
+}
+
+.box3 img {
+  display: none;
+}
+
+.box4:hover img {
+  display: block;
+  border-radius: 50%;
+}
+
+.box4:hover h4 {
+  display: none;
+}
+
+.box4 img {
+  display: none;
+}
+
+.messages:hover {
+  opacity: 1;
+}
+
+/* End of Hover Effects */
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutDescribe {
+  padding: 2%;
+  color: #B0E0E6;
+  font-size: 2em;
+  text-align: right;
+}
+
+span {
+  color: red;
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 40%;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 1214px){
+
+form {
+  background: rgba(0,0,0,0.5);
+  width: 45%;
+  height: 456px;
+  text-align: center;
+  padding: 1%;
+  font-size: 1.25em;
+  color: #FFFFF0;
+}
+  .circles {
+    width:25%;
+    display: inline-table;
+    padding: 2%;
+  }
+
+ .box1, .box2, .box3, .box4 {
+    width: 15em;
+    height: 15em;
+    margin: 2px;
+  }
+
+  .codrops-demos {
+    padding-top: 5px;
+		text-align: center;
+		padding-top: 20px;
+  	font-size: 30px;
+		padding-left: 10px;
+		padding-right: 10px;
+  }
+
+  .pboxes {
+    margin-left: 0;
+  }
+
+  .codrops-demos a {
+    display: inline-table;
+    margin: 0.1em;
+    padding: 0.1em;
+		font-size: 35px;
+  }
+
+	#up{
+		right: 15px;
+		top: 144px;
+}
+

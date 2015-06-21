@@ -1,0 +1,15 @@
+{
+  "name": "project_x_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdul Hagi",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^4.0.5",
+    "restify": "^3.0.3"
+  }
+}
